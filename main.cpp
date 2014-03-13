@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include <iostream>
 #include "glew/glew.h"												// Header File For The OpenGL32 Library
-#include <GL/glut.h>												// Header File for Glut
+#include "glut/glut.h"												// Header File for Glut
 #include "math.h"													// math functions
 
 #pragma comment( lib, "opengl32.lib" )								// Search For openhl32.lib while linking
@@ -490,8 +490,8 @@ void loadMeshAndSetupControlPoints()
 {
 
 	// open an OBJ file to deform
-	string pighinOBJ = "Data/pighin_mesh.obj";
-	string samsungOBJ = "Data/samsung_mesh.obj";
+	string pighinOBJ = "Data/pighin_mesh.wobj";
+	string samsungOBJ = "Data/samsung_mesh.wobj";
 	pighinMeshUndeformed = new TriangleMesh(pighinOBJ);
 	pighinMeshUndeformed->updateNormals();
 	pighinMeshDeformed = new TriangleMesh(pighinOBJ);
@@ -567,8 +567,8 @@ int main(int argc, char** argv)
 	
 	/* a user menu interface */
 	glutCreateMenu(glutMenu);
-	glutAddMenuEntry("Use Pighin Mesh", 1);
-	glutAddMenuEntry("Use Samsung Mesh", 2);
+	glutAddMenuEntry("Morph first mesh into second mesh's position (1->2)", 1);
+	glutAddMenuEntry("Morph second mesh into first mesh's position (2->1)", 2);
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 
 	/*
