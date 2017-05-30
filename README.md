@@ -1,7 +1,8 @@
 FaceMorph
 =========
 
-Takes two 3D head models and makes them morph into one another. (June 2010)
+Takes two 3D head models and makes them morph into one another. (June 2010)  
+https://www.youtube.com/watch?v=RdsKzhtXaIw
 
 ------------------------------------------------------------------
 
